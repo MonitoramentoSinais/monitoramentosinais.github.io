@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitoramento de sinais</title>
+	<!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+	<!-- Organograma -->
+	<link href="assets/organograma/css/jquery.jOrgChart.css" rel="stylesheet" />
+	
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   
+
+
+    <link rel="stylesheet" href="assets/organograma/css/jquery.jOrgChart.css"/>
+    <link href="assets/organograma/css/prettify.css" type="text/css" rel="stylesheet" />
+
+    <script type="text/javascript" src="prettify.js"></script>
+    
+    <!-- jQuery includes -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+    
+    <script src="jquery.jOrgChart.js"></script>
+
+    <script>
+    jQuery(document).ready(function() {
+        $("#org").jOrgChart({
+            chartElement : '#chart',
+            dragAndDrop  : true
+        });
+    });
+    </script>
+	
+    <script src="libraries/RGraph.common.core.js" ></script>
+    <script src="libraries/RGraph.common.annotate.js" ></script>
+    <script src="libraries/RGraph.common.context.js" ></script>
+    <script src="libraries/RGraph.common.tooltips.js" ></script>
+    <script src="libraries/RGraph.common.resizing.js" ></script>
+    <script src="libraries/RGraph.bar.js" ></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Monitoramento de sinais</a> 
+            </div>
+
+        </nav>   
+           <!-- /. NAV TOP  -->
+                <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+               <div class="sidebar-collapse">
+               <ul class="nav" id="main-menu">
+                <li class="text-center">
+                    <img src="http://3.bp.blogspot.com/-sSzAp-CLgEI/VRCYHhXcI4I/AAAAAAAAAlg/-p2fXL3jkNE/s1600/boneco-com-lupa.jpg" class="user-image img-responsive"/>
+                    </li>
+                
+                    
+                    <li>
+                        <a href="index.html"><i class="fa fa-dashboard fa-3x"></i> Inicio</a>
+                    </li>
+                    <li>
+                        <a  href="sensores.html"><i class="fa fa-desktop fa-3x"></i> Sensores</a>
+                    </li>
+                    <li>
+                        <a    href="graficos.html"><i class="fa fa-bar-chart-o fa-3x"></i> Gráficos</a>
+                    </li>   
+                    <li>
+                        <a  href="tabelas.html"><i class="fa fa-table fa-3x"></i> Tabelas</a>
+                    </li>
+					<li>
+                        <a class="active-menu" href="integrantes.html"><i class="fa fa-qrcode fa-3x"></i> Integrantes</a>
+                    </li>
+                </ul>
+               
+            </div>
+            
+        </nav>  
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+<!-- /. ROW  -->
+<?php
+# FileName="Connection_php_mysql.htm"
+# Type="MYSQL"
+# HTTP="true"
+$hostname_config1 = "mysql.hostinger.com.br";
+$database_config1 = "u702593220_msdb";
+$username_config1 = "u702593220_tcc";
+$password_config1 = "TCC2016!@#";
+$config1 = mysql_pconnect($hostname_config1, $username_config1, $password_config1) or trigger_error(mysql_error(),E_USER_ERROR);
+?>
+
+                 
+				 <div class="row">
+<table>
+<th action="teste.php">NAME</th>
+<th action="teste.php">ID</th>
+
+</table>
+</body>
+</html>
+   
+				 </div><!-- /.ROW -->
+				 
+				 
+				 
+				 <hr />
+               
+    </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+		<!-- Organograma -->
+	<script src="assets/js/jquery.jOrgChart.js"></script>
+    
+   
+</body>
+</html>
