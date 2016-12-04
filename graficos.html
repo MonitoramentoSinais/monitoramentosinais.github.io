@@ -16,6 +16,27 @@
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
 <body>
+<script language="JavaScript">
+
+ function vai(combo)
+
+ {
+
+  var x = combo.selectedIndex;
+
+  var endereco = combo.options[x].value;
+
+  if (endereco != "#")
+
+{
+
+  novapagina = window.open(endereco,"NovaPgn");
+
+}
+
+}
+
+</script>
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -77,15 +98,28 @@
                             Selecione o numero de registros:
                         </div>
                         <div class="panel-body">
-				 <form action="">
-				 
-					<input type="radio" name="gender" value="10_registros" onclick="window.location.href='graficos10.html'"> 10 Registros<br>
-					<input type="radio" name="gender" value="10_registros" onclick="window.location.href='graficos20.html'"> 20 Registros<br>
-					<input type="radio" name="gender" value="10_registros" onclick="window.location.href='graficos30.html'"> 30 Registros<br>
-					<input type="radio" name="gender" value="10_registros" onclick="window.location.href='graficos40.html'" > 40 Registros<br>
-					<input type="radio" name="gender" value="10_registros" onclick="window.location.href='graficos50.html'"> 50 Registros<br>
-					<input type="radio" name="gender" value="10_registros" onclick="window.location.href='graficos60.html'"> 60 Registros<br>				
-	</form>
+						
+				<form name="Menu">
+
+						<select name="pages" size="1" onChange="vai(this);">
+
+						<option value="#">Quantos resultados deseja ver?
+
+						<option value="graficos10.html">10 registros
+
+						<option value="graficos20.html">20 registros
+
+						<option value="graficos30.html">30 registros
+						
+						<option value="graficos40.html">40 registros
+						
+						<option value="graficos50.html">50 registros
+						
+						<option value="graficos60.html">60 registros
+						</select>
+
+				</form>
+
 <input type=button onClick="location.href='https://api.thingspeak.com/stream/channels/177737/feeds?api_key=8EHE0584AWMW0W62&amp;timezone=UTCl'" value='Download CSV'></input>
 
 
@@ -102,7 +136,7 @@
                             Camera de monitoramento
                         </div>
                         <div class="panel-body">
-                            <iframe width="1500" height="520" style="border: 1px solid #cccccc;" src="https://player.twitch.tv/?volume=0.5&channel=hpadovani"></iframe> 
+                            <iframe width="1000" height="520" style="border: 1px solid #cccccc;" src="https://player.twitch.tv/?volume=0.5&channel=hpadovani"></iframe> 
                        
 							</div>
 						</div>            
@@ -117,18 +151,18 @@
                         </div>
                         <div class="panel-body">
                             
-                            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/177737/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=143&type=line"></iframe>
+                            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/177737/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=15&type=line"></iframe>
                         </div>
                     </div>            
                 </div>
                       <div class="col-md-6 col-sm-12 col-xs-12">                     
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            ECG (Eletrocardiograma)
+                            Batimentos Cardiacos
                         </div>
                         <div class="panel-body">
 						
-                            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/177737/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Batimentos&type=line"></iframe>
+                            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/177737/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=15&title=Batimentos&type=line"></iframe>
 
 						</div>
                     </div>            
@@ -141,11 +175,14 @@
                                <div class="col-md-6 col-sm-12 col-xs-12">                     
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Pressão
+                            Oxigenação no sangue
                         </div>
                         <div class="panel-body">
                             
-							<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/177737/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&type=line"></iframe>
+							
+
+						<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/177737/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=15&title=Oxigena%C3%A7%C3%A3o+%25&type=line&xaxis=Hora&yaxis=%25+SPo2&yaxismax=100"></iframe>
+
 
                         </div>
                     </div>            
@@ -153,10 +190,14 @@
                       <div class="col-md-6 col-sm-12 col-xs-12">                     
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Respiração
+                            Fluxo de ar
                         </div>
                         <div class="panel-body">
                           
+
+						<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/177737/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=15&title=Fluxo+de+Ar&type=line&xaxis=Hora"></iframe>
+
+
                         </div>
                     </div>            
                 </div> 
